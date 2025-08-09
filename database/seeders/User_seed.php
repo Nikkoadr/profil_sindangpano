@@ -14,7 +14,7 @@ class User_seed extends Seeder
      */
     public function run(): void
     {
-        User::created(
+        User::create(
             [
                 'name' => 'Administrator',
                 'email' => 'admin@sindangpano.com',
