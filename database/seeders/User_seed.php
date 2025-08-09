@@ -17,9 +17,9 @@ class User_seed extends Seeder
         User::created(
             [
                 'name' => 'Administrator',
-                'email' => 'nikkoadrian02@gmail.com',
+                'email' => 'admin@sindangpano.com',
                 'password' => Hash::make('1234567800')
             ]
-            );
+        );
     }
 }
