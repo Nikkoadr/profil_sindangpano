@@ -243,48 +243,4 @@
         </div>
     </div>
 </div>
-
-<div class="container-fluid bg-light py-5">
-    <div class="container py-5">
-        <h1 class="mb-5">Tokoh <span class="text-uppercase text-primary bg-light px-2">Desa</span></h1>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                <div class="team-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{ asset('assets/img/kuwu.jpg') }}" alt="">
-                    <div class="team-overlay">
-                        <small class="mb-2">Kepala Desa</small>
-                        <h4 class="lh-base text-light">Bapak Nana Karna</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                <div class="team-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{ asset('assets/img/team-2.jpg') }}" alt="">
-                    <div class="team-overlay">
-                        <small class="mb-2">Sekretaris Desa</small>
-                        <h4 class="lh-base text-light">Bapak Ricky Iskandar</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                <div class="team-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{ asset('assets/img/team-3.jpg') }}" alt="">
-                    <div class="team-overlay">
-                        <small class="mb-2">Ketua Karang Taruna</small>
-                        <h4 class="lh-base text-light">Sdr. XXXXX XXXXX</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                <div class="team-item position-relative overflow-hidden">
-                    <img class="img-fluid w-100" src="{{ asset('assets/img/team-4.jpg') }}" alt="">
-                    <div class="team-overlay">
-                        <small class="mb-2">Ketua BUMDes</small>
-                        <h4 class="lh-base text-light">Bpk. XXXX XXXXX</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 @endsection
