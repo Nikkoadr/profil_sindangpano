@@ -29,7 +29,7 @@
                                     </a>
                                     @if (Route::has('register'))
                                     <a
-                                        href="{{ url('/register') }}" class="dropdown-item">Regsiter
+                                        href="{{ url('/register') }}" class="dropdown-item">Register
                                     </a>
                                     @endif
                                 @endauth
