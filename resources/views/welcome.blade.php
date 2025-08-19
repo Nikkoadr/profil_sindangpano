@@ -11,9 +11,9 @@
             </div>
             <div class="col-lg-6">
                 <div class="owl-carousel header-carousel animated fadeIn">
-                    <img class="img-fluid" src="{{ asset('assets/img/sindangpano-1.jpg') }}" alt="Pemandangan Alam">
-                    <img class="img-fluid" src="{{ asset('assets/img/sindangpano-2.jpg') }}" alt="Kegiatan Warga">
-                    <img class="img-fluid" src="{{ asset('assets/img/sindangpano-3.jpg') }}" alt="Pertanian Lokal">
+                    <img class="img-fluid" src="{{ asset('assets/img/sindangpano-3.jpeg') }}" alt="Pemandangan Alam">
+                    <img class="img-fluid" src="{{ asset('assets/img/sindangpano-2.jpeg') }}" alt="Kegiatan Warga">
+                    <img class="img-fluid" src="{{ asset('assets/img/sindangpano-1.jpeg') }}" alt="Pertanian Lokal">
                 </div>
             </div>
         </div>
@@ -63,9 +63,9 @@
                             <img class="img-fluid" src="{{ asset('assets/img/logo.png') }}" alt="Kegiatan Masyarakat">
                         </div>
                         <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
-                            <img class="img-fluid h-75" src="{{ asset('assets/img/balai_desa.jpg') }}" alt="Alam Sindangpano">
+                            <img class="img-fluid h-75" src="{{ asset('assets/img/maps.jpeg') }}" alt="Alam Sindangpano">
                             <div class="h-25 d-flex align-items-center text-center bg-primary px-4">
-                                <h4 class="text-white lh-base mb-0">Balai Desa Sindangpano</h4>
+                                <h4 class="text-white lh-base mb-0">Batas Wilayah Desa</h4>
                             </div>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                 <div class="row g-0">
                     <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
                         <div class="project-item position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/project-1.jpg') }}" alt="">
+                            <img class="img-fluid w-100" src="{{ asset('assets/img/berita/berita-1.jpeg') }}" alt="">
                             <a class="project-overlay text-decoration-none" href="#">
                                 <h4 class="text-white">Peringatan HUT RI ke-80</h4>
                                 <small class="text-white">Agustus 2025</small>
@@ -143,10 +143,10 @@
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
                         <div class="project-item position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/project-2.jpg') }}" alt="">
+                            <img class="img-fluid w-100" src="{{ asset('assets/img/berita/berita-2.jpeg') }}" alt="">
                             <a class="project-overlay text-decoration-none" href="#">
-                                <h4 class="text-white">Pengobatan Gratis & Posyandu</h4>
-                                <small class="text-white">7 Agustus 2025</small>
+                                <h4 class="text-white">Kerja Bakti Bersih Desa</h4>
+                                <small class="text-white">Agustus 2025</small>
                             </a>
                         </div>
                     </div>
@@ -179,10 +179,10 @@
                     </div>
                     <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.7s">
                         <div class="project-item position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/project-6.jpg') }}" alt="">
+                            <img class="img-fluid w-100" src="{{ asset('assets/img/berita/berita-3.jpeg') }}" alt="">
                             <a class="project-overlay text-decoration-none" href="#">
-                                <h4 class="text-white">Kerja Bakti Bersih Desa</h4>
-                                <small class="text-white">Setiap Jumat</small>
+                                <h4 class="text-white">Kegiatan Masyarakat</h4>
+                                <small class="text-white">Juli 2025</small>
                             </a>
                         </div>
                     </div>
@@ -197,45 +197,45 @@
         <div class="row g-5 align-items-center">
             <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
                 <h1 class="mb-5">Wisata <span class="text-uppercase text-primary bg-light px-2">Desa</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quas porro, cupiditate repellendus eum suscipit? Rem dolores quibusdam fugit. Dignissimos nisi cupiditate sequi aliquid repudiandae repellendus dicta perspiciatis ipsa sit.</p>
-                <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo ab porro nobis quasi, non, dolor impedit cum magnam ex qui culpa ratione voluptatibus voluptates numquam architecto natus quam nisi voluptatem?</p>
+                <p>Desa Sindangpano memiliki potensi wisata alam yang indah dan masih asri. Dari hamparan sawah hijau, bendungan, hingga waduk yang menenangkan, setiap sudut desa menyajikan pemandangan yang memanjakan mata.</p>
+                <p class="mb-5">Selain itu, terdapat destinasi wisata alam Cipeundeuy Endah yang menawarkan berbagai aktivitas seru seperti rafting, tubing, hingga glamping. Desa ini menjadi pilihan tepat untuk berlibur bersama keluarga sekaligus menikmati suasana pedesaan yang damai.</p>
             </div>
             <div class="col-lg-7">
                 <div class="row g-0">
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.2s">
                         <div class="service-item h-100 d-flex flex-column justify-content-center bg-primary">
                             <a href="#" class="service-img position-relative mb-4">
-                                <img class="img-fluid w-100" src="{{ asset('assets/img/service-1.jpg') }}" alt="">
+                                <img class="img-fluid w-100" src="{{ asset('assets/img/wisata-1.jpeg') }}" alt="">
                                 <h3>Sawah panenjoan</h3>
                             </a>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum alias debitis tempora sint explicabo accusantium dicta modi enim at voluptates. Ipsa iure iste voluptates enim laudantium quas earum dolore dolorum.</p>
+                            <p class="mb-0">Nikmati keindahan hamparan sawah hijau dengan latar pegunungan yang menyejukkan mata. Tempat ini cocok untuk bersantai sambil menikmati suasana pedesaan yang asri serta menjadi spot favorit untuk berfoto.</p>
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
                         <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
                             <a href="#" class="service-img position-relative mb-4">
-                                <img class="img-fluid w-100" src="{{ asset('assets/img/service-2.jpg') }}" alt="">
+                                <img class="img-fluid w-100" src="{{ asset('assets/img/wisata-2.jpeg') }}" alt="">
                                 <h3>Bendungan Sindangpano</h3>
                             </a>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi consequuntur debitis voluptate et laborum ex eligendi dolor autem cum doloremque porro, dicta maiores aut, ipsa fuga incidunt blanditiis culpa natus.</p>
+                            <p class="mb-0">Bendungan ini tidak hanya berfungsi sebagai sumber irigasi, tetapi juga menjadi daya tarik wisata dengan panorama air yang tenang dikelilingi pepohonan rindang. Pengunjung dapat menikmati suasana alami sekaligus bersantai bersama keluarga.</p>
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.6s">
                         <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
                             <a href="#" class="service-img position-relative mb-4">
-                                <img class="img-fluid w-100" src="{{ asset('assets/img/service-3.jpg') }}" alt="">
+                                <img class="img-fluid w-100" src="{{ asset('assets/img/wisata-3.jpeg') }}" alt="">
                                 <h3>Waduk Sindangpano</h3>
                             </a>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, consequuntur a ab commodi vel repellat omnis molestiae. Minima, ea tenetur similique maiores, illum dolore distinctio eos, dolorem ipsam rerum illo.</p>
+                            <p class="mb-0">Objek wisata air yang menjadi pusat aktivitas warga sekaligus tempat rekreasi menarik. Pengunjung bisa menikmati pemandangan waduk, memancing, atau sekadar duduk santai menikmati semilir angin di tepi waduk.</p>
                         </div>
                     </div>
                     <div class="col-md-6 wow fadeIn" data-wow-delay="0.8s">
                         <div class="service-item h-100 d-flex flex-column justify-content-center bg-primary">
                             <a href="#" class="service-img position-relative mb-4">
-                                <img class="img-fluid w-100" src="{{ asset('assets/img/service-4.jpg') }}" alt="">
+                                <img class="img-fluid w-100" src="{{ asset('assets/img/wisata-4.jpeg') }}" alt="">
                                 <h3>Cipeundeuy Endah</h3>
                             </a>
-                            <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati mollitia incidunt, non aliquid magnam eum necessitatibus iste? Aut voluptate illo neque ex porro! Dolore vel reprehenderit, ea nulla repellendus ex.</p>
+                            <p class="mb-0">Destinasi wisata alam yang populer dengan berbagai aktivitas seru seperti rafting, tubing, hingga glamping/villa. Cocok untuk pecinta petualangan maupun keluarga yang ingin menikmati liburan.</p>
                         </div>
                     </div>
                 </div>
@@ -243,4 +243,48 @@
         </div>
     </div>
 </div>
+<div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <h1 class="mb-5">UMKM <span class="text-uppercase text-primary bg-light px-2">Lokal</span>
+            </h1>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+                    <div class="team-item position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="{{ asset('assets/img/roti-1.jpeg') }}" alt="">
+                        <div class="team-overlay">
+                            <small class="mb-2">UMKM</small>
+                            <h4 class="lh-base text-light">Roti Bakar</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
+                    <div class="team-item position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="{{ asset('assets/img/melinjo-1.jpeg') }}" alt="">
+                        <div class="team-overlay">
+                            <small class="mb-2">UMKM</small>
+                            <h4 class="lh-base text-light">Kerajinan Rotan</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
+                    <div class="team-item position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="{{ asset('assets/img/melinjo-1.jpeg') }}" alt="">
+                        <div class="team-overlay">
+                            <small class="mb-2">UMKM</small>
+                            <h4 class="lh-base text-light">Emping Melinjo</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeIn;">
+                    <div class="team-item position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="{{ asset('assets/img/melinjo-1.jpeg') }}" alt="">
+                        <div class="team-overlay">
+                            <small class="mb-2">UMKM</small>
+                            <h4 class="lh-base text-light">Keripik Gadung</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection
