@@ -23,7 +23,7 @@
         <!-- Add icons to the links using the .nav-icon class
             with font-awesome or any other icon font library -->
         <li class="nav-item">
-        <a href="/home" class="nav-link">
+        <a href="/home" class="nav-link {{ request()->is('home') ? 'active' : '' }}">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
             Dashboard
@@ -31,7 +31,7 @@
         </a>
         </li>
         <li class="nav-item">
-        <a href="/home/berita" class="nav-link">
+        <a href="/home/berita" class="nav-link {{ request()->is('home/berita') ? 'active' : '' }}">
             <i class="nav-icon fas fa-newspaper"></i>
             <p>
             Berita
@@ -39,7 +39,7 @@
         </a>
         </li>
         <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/home/umkm" class="nav-link {{ request()->is('home/umkm') ? 'active' : '' }}">
             <i class="nav-icon fas fa-building"></i>
             <p>
             UMKM
@@ -47,7 +47,7 @@
         </a>
         </li>
         <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="#" class="nav-link {{ request()->is('home/wisata') ? 'active' : '' }}">
             <i class="nav-icon fas fa-globe"></i>
             <p>
             Wisata

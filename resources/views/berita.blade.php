@@ -36,101 +36,21 @@
 
             <!-- Daftar 6 Berita -->
             <div class="row g-4">
-                <!-- Berita 1 -->
+                @foreach ($berita as $row)
                 <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
                     <div class="service-item bg-light h-100">
                         <a href="#" class="service-img position-relative mb-3">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/newsletter.jpg') }}" alt="Berita 1">
-                            <h4 class="px-2">Gotong Royong Bersihkan Jalan Desa</h4>
+                            <img class="img-fluid w-100" src="{{ asset('/storage/berita/'.$row->gambar) }}" alt="{{ $row->judul }}">
+                            <h4 class="px-2">{{ $row->judul }}</h4>
                         </a>
-                        <p class="px-3 pb-3">Warga Desa Sindangpano mengadakan kegiatan bersih desa dalam rangka menyambut HUT Kemerdekaan RI ke-80.</p>
+                        <p class="px-3 pb-3">{{ Str::limit(strip_tags($row->isi), 120, '...') }}</p>
                     </div>
                 </div>
-                <!-- Berita 2 -->
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
-                    <div class="service-item bg-light h-100">
-                        <a href="#" class="service-img position-relative mb-3">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/newsletter.jpg') }}" alt="Berita 2">
-                            <h4 class="px-2">Musyawarah Rencana Pembangunan</h4>
-                        </a>
-                        <p class="px-3 pb-3">Pemerintah Desa menggelar Musrenbang dalam merancang pembangunan desa tahun anggaran 2026.</p>
-                    </div>
-                </div>
-                <!-- Berita 3 -->
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="service-item bg-light h-100">
-                        <a href="#" class="service-img position-relative mb-3">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/newsletter.jpg') }}" alt="Berita 3">
-                            <h4 class="px-2">Pelatihan UMKM untuk Pemuda</h4>
-                        </a>
-                        <p class="px-3 pb-3">Karang Taruna bekerja sama dengan Dinas Perdagangan menggelar pelatihan kewirausahaan digital.</p>
-                    </div>
-                </div>
-                <!-- Berita 4 -->
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.4s">
-                    <div class="service-item bg-light h-100">
-                        <a href="#" class="service-img position-relative mb-3">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/newsletter.jpg') }}" alt="Berita 4">
-                            <h4 class="px-2">Launching Website Desa</h4>
-                        </a>
-                        <p class="px-3 pb-3">Website resmi Desa Sindangpano diluncurkan untuk meningkatkan layanan informasi publik.</p>
-                    </div>
-                </div>
-                <!-- Berita 5 -->
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="service-item bg-light h-100">
-                        <a href="#" class="service-img position-relative mb-3">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/newsletter.jpg') }}" alt="Berita 5">
-                            <h4 class="px-2">Lomba 17 Agustus Kembali Digelar</h4>
-                        </a>
-                        <p class="px-3 pb-3">Berbagai perlombaan rakyat akan digelar oleh panitia kemerdekaan di balai desa Sindangpano.</p>
-                    </div>
-                </div>
-                <!-- Berita 6 -->
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light h-100">
-                        <a href="#" class="service-img position-relative mb-3">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/newsletter.jpg') }}" alt="Berita 6">
-                            <h4 class="px-2">Posyandu Balita Aktif Kembali</h4>
-                        </a>
-                        <p class="px-3 pb-3">Kader kesehatan menghidupkan kembali kegiatan Posyandu dengan pemantauan gizi rutin balita.</p>
-                    </div>
-                </div>
-                <!-- Berita 7 -->
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light h-100">
-                        <a href="#" class="service-img position-relative mb-3">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/newsletter.jpg') }}" alt="Berita 6">
-                            <h4 class="px-2">Posyandu Balita Aktif Kembali</h4>
-                        </a>
-                        <p class="px-3 pb-3">Kader kesehatan menghidupkan kembali kegiatan Posyandu dengan pemantauan gizi rutin balita.</p>
-                    </div>
-                </div>
-                <!-- Berita 8 -->
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light h-100">
-                        <a href="#" class="service-img position-relative mb-3">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/newsletter.jpg') }}" alt="Berita 6">
-                            <h4 class="px-2">Posyandu Balita Aktif Kembali</h4>
-                        </a>
-                        <p class="px-3 pb-3">Kader kesehatan menghidupkan kembali kegiatan Posyandu dengan pemantauan gizi rutin balita.</p>
-                    </div>
-                </div>
-                <!-- Berita 9 -->
-                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
-                    <div class="service-item bg-light h-100">
-                        <a href="#" class="service-img position-relative mb-3">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/newsletter.jpg') }}" alt="Berita 6">
-                            <h4 class="px-2">Posyandu Balita Aktif Kembali</h4>
-                        </a>
-                        <p class="px-3 pb-3">Kader kesehatan menghidupkan kembali kegiatan Posyandu dengan pemantauan gizi rutin balita.</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
 </div>
 <!-- Berita End -->
-
 
 @endsection

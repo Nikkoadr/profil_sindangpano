@@ -4,6 +4,7 @@ use App\Http\Controllers\BeritaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+use App\Models\Berita;
 
 Route::get('/', function () {
     return view('welcome');
@@ -15,7 +16,8 @@ Route::get('/sejarah', function () {
     return view('sejarah');
 });
 Route::get('/berita', function () {
-    return view('berita');
+    $berita = Berita::latest()->take(6)->get();
+    return view('berita', compact('berita'));
 });
 Route::get('/kontak', function () {
     return view('kontak');

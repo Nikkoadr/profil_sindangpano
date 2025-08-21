@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('berita', function (Blueprint $table) {
             $table->id();
+            $table->string('judul');
+            $table->string('slug')->nullable();
+            $table->text('isi')->nullable();
+            $table->string('gambar')->nullable();
+            $table->string('penulis');
             $table->timestamps();
         });
     }

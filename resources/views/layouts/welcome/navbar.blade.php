@@ -21,7 +21,7 @@
                             @if (Route::has('login'))
                                 @auth
                                     <a
-                                        href="{{ url('/dashboard') }}" class="dropdown-item">Dashboard
+                                        href="{{ url('/home') }}" class="dropdown-item">Dashboard
                                     </a>
                                 @else
                                     <a
