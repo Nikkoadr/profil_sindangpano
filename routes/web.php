@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\BeritaController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -25,6 +27,8 @@ Route::get('/struktur', function () {
 Auth::routes([
     'register' => false,
     'reset' => false,
-    'verify' => false,]);
+    'verify' => false,
+]);
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::resource('/home/berita', BeritaController::class);

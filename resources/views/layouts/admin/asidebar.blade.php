@@ -23,7 +23,7 @@
         <!-- Add icons to the links using the .nav-icon class
             with font-awesome or any other icon font library -->
         <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/home" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
             Dashboard
@@ -31,10 +31,26 @@
         </a>
         </li>
         <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/home/berita" class="nav-link">
             <i class="nav-icon fas fa-newspaper"></i>
             <p>
             Berita
+            </p>
+        </a>
+        </li>
+        <li class="nav-item">
+        <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-building"></i>
+            <p>
+            UMKM
+            </p>
+        </a>
+        </li>
+        <li class="nav-item">
+        <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-globe"></i>
+            <p>
+            Wisata
             </p>
         </a>
         </li>
