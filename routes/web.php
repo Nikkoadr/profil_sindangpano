@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\UmkmController;
+use App\Http\Controllers\WisataController;
+use App\Http\Controllers\PengaturanController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
@@ -36,3 +38,5 @@ Auth::routes([
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::resource('/home/berita', BeritaController::class);
 Route::resource('/home/umkm', UmkmController::class);
+Route::resource('/home/wisata', WisataController::class);
+Route::resource('/home/pengaturan', PengaturanController::class)->only(['index', 'update']);

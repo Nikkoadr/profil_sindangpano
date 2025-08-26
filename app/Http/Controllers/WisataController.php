@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Umkm;
+use App\Models\Wisata;
 use Illuminate\Support\Facades\Storage;
 
-class UmkmController extends Controller
+class WisataController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -25,86 +25,86 @@ class UmkmController extends Controller
      */
     public function index()
     {
-        $umkm = Umkm::orderBy('created_at', 'desc')->get();
-        return view('admin.umkm.index', compact('umkm'));
+        $wisata = Wisata::orderBy('created_at', 'desc')->get();
+        return view('admin.wisata.index', compact('wisata'));
     }
 
 
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'nama_umkm' => 'required|string|max:255',
+            'nama_wisata' => 'required|string|max:255',
             'alamat' => 'required',
             'kontak' => 'required',
             'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         $filename = $request->file('gambar')->hashName();
-        $request->file('gambar')->storeAs('umkm', $filename, 'public');
+        $request->file('gambar')->storeAs('wisata', $filename, 'public');
 
-        Umkm::create([
-            'nama_umkm' => $validated['nama_umkm'],
+        Wisata::create([
+            'nama_wisata' => $validated['nama_wisata'],
             'alamat'    => $validated['alamat'],
             'kontak'    => $validated['kontak'],
             'gambar'    => $filename,
         ]);
 
-        return redirect()->route('umkm.index')
-            ->with('success', 'UMKM berhasil ditambahkan.');
+        return redirect()->route('wisata.index')
+            ->with('success', 'wisata berhasil ditambahkan.');
     }
 
 
     public function edit(string $id)
     {
-        $umkm = Umkm::findOrFail($id);
-        return view('admin.umkm.edit', compact('umkm'));
+        $wisata = Wisata::findOrFail($id);
+        return view('admin.wisata.edit', compact('wisata'));
     }
 
     public function update(Request $request, string $id)
     {
         $validated = $request->validate([
-            'nama_umkm' => 'required|string|max:255',
+            'nama_wisata' => 'required|string|max:255',
             'alamat' => 'required',
             'kontak' => 'required',
             'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $umkm = Umkm::findOrFail($id);
+        $wisata = Wisata::findOrFail($id);
 
         if ($request->hasFile('gambar')) {
-            if ($umkm->gambar && Storage::disk('public')->exists('umkm/' . $umkm->gambar)) {
-                Storage::disk('public')->delete('umkm/' . $umkm->gambar);
+            if ($wisata->gambar && Storage::disk('public')->exists('wisata/' . $wisata->gambar)) {
+                Storage::disk('public')->delete('wisata/' . $wisata->gambar);
             }
 
             $filename = $request->file('gambar')->hashName();
-            $request->file('gambar')->storeAs('umkm', $filename, 'public');
+            $request->file('gambar')->storeAs('wisata', $filename, 'public');
             $validated['gambar'] = $filename;
         } else {
-            $validated['gambar'] = $umkm->gambar;
+            $validated['gambar'] = $wisata->gambar;
         }
 
-        $umkm->update([
-            'nama_umkm' => $validated['nama_umkm'],
+        $wisata->update([
+            'nama_wisata' => $validated['nama_wisata'],
             'alamat' => $validated['alamat'],
             'kontak' => $validated['kontak'],
             'gambar' => $validated['gambar'],
         ]);
 
-        return redirect()->route('umkm.index')
-            ->with('success', 'UMKM berhasil diperbarui!');
+        return redirect()->route('wisata.index')
+            ->with('success', 'wisata berhasil diperbarui!');
     }
 
 
     public function destroy($id)
     {
-        $umkm = Umkm::findOrFail($id);
+        $wisata = Wisata::findOrFail($id);
 
-        if ($umkm->gambar && Storage::disk('public')->exists($umkm->gambar)) {
-            Storage::disk('public')->delete($umkm->gambar);
+        if ($wisata->gambar && Storage::disk('public')->exists($wisata->gambar)) {
+            Storage::disk('public')->delete($wisata->gambar);
         }
 
-        $umkm->delete();
+        $wisata->delete();
 
-        return redirect()->route('umkm.index')->with('success', 'UMKM berhasil dihapus.');
+        return redirect()->route('wisata.index')->with('success', 'wisata berhasil dihapus.');
     }
 }

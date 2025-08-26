@@ -47,10 +47,18 @@
         </a>
         </li>
         <li class="nav-item">
-        <a href="#" class="nav-link {{ request()->is('home/wisata') ? 'active' : '' }}">
+        <a href="/home/wisata" class="nav-link {{ request()->is('home/wisata') ? 'active' : '' }}">
             <i class="nav-icon fas fa-globe"></i>
             <p>
             Wisata
+            </p>
+        </a>
+        </li>
+        <li class="nav-item">
+        <a href="/home/pengaturan" class="nav-link {{ request()->is('home/pengaturan') ? 'active' : '' }}">
+            <i class="nav-icon fas fa-cogs"></i>
+            <p>
+            Pengaturan
             </p>
         </a>
         </li>

@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             User_seed::class,
+            Pengaturan_seed::class,
         ]);
     }
 }
