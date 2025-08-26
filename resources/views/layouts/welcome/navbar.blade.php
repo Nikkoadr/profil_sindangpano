@@ -14,6 +14,8 @@
                             <a href="/sejarah" class="nav-item nav-link {{ request()->is('sejarah') ? 'active' : '' }}">Sejarah</a>
                             <a href="/struktur" class="nav-item nav-link {{ request()->is('struktur') ? 'active' : '' }}">Struktur</a>
                             <a href="/berita" class="nav-item nav-link {{ request()->is('berita') ? 'active' : '' }}">Berita</a>
+                            <a href="/wisata" class="nav-item nav-link {{ request()->is('wisata') ? 'active' : '' }}">Wisata</a>
+                            <a href="/umkm" class="nav-item nav-link {{ request()->is('umkm') ? 'active' : '' }}">UMKM</a>
                             <a href="/kontak" class="nav-item nav-link {{ request()->is('kontak') ? 'active' : '' }}">Kontak</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Manajement</a>

@@ -12,7 +12,10 @@ use App\Models\Wisata;
 use App\Models\Umkm;
 
 Route::get('/', function () {
-    return view('welcome');
+    $berita = Berita::latest()->take(6)->get();
+    $wisata = Wisata::latest()->take(4)->get();
+    $umkm = Umkm::latest()->take(4)->get();
+    return view('welcome', compact('berita', 'wisata', 'umkm'));
 });
 Route::get('/404', function () {
     return view('404');
