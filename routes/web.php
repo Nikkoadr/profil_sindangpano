@@ -10,12 +10,14 @@ use App\Http\Controllers\HomeController;
 use App\Models\Berita;
 use App\Models\Wisata;
 use App\Models\Umkm;
+use App\Models\Pengaturan;
 
 Route::get('/', function () {
+    $pengaturan = Pengaturan::first();
     $berita = Berita::latest()->take(6)->get();
     $wisata = Wisata::latest()->take(4)->get();
     $umkm = Umkm::latest()->take(4)->get();
-    return view('welcome', compact('berita', 'wisata', 'umkm'));
+    return view('welcome', compact('berita', 'wisata', 'umkm', 'pengaturan'));
 });
 Route::get('/404', function () {
     return view('404');

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('alamat')->nullable();
             $table->string('kontak')->nullable();
             $table->string('gambar')->nullable();
+            $table->text('deskripsi')->nullable();
             $table->timestamps();
         });
     }
