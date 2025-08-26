@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
 use App\Models\Berita;
+use App\Models\Wisata;
+use App\Models\Umkm;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,10 +20,20 @@ Route::get('/404', function () {
 Route::get('/sejarah', function () {
     return view('sejarah');
 });
+
 Route::get('/berita', function () {
     $berita = Berita::latest()->take(6)->get();
     return view('berita', compact('berita'));
 });
+Route::get('/wisata', function () {
+    $wisata = Wisata::latest()->take(6)->get();
+    return view('wisata', compact('wisata'));
+});
+Route::get('/umkm', function () {
+    $umkm = Umkm::latest()->take(6)->get();
+    return view('umkm', compact('umkm'));
+});
+
 Route::get('/kontak', function () {
     return view('kontak');
 });
