@@ -130,64 +130,28 @@
                     <h4 class="text-white mb-0"><span class="display-1">6</span> Informasi Terkini</h4>
                 </div>
             </div>
-            <div class="col-lg-7">
-                <div class="row g-0">
-                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
-                        <div class="project-item position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/berita/berita-1.jpeg') }}" alt="">
-                            <a class="project-overlay text-decoration-none" href="#">
-                                <h4 class="text-white">Peringatan HUT RI ke-80</h4>
-                                <small class="text-white">Agustus 2025</small>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                        <div class="project-item position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/berita/berita-2.jpeg') }}" alt="">
-                            <a class="project-overlay text-decoration-none" href="#">
-                                <h4 class="text-white">Kerja Bakti Bersih Desa</h4>
-                                <small class="text-white">Agustus 2025</small>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.4s">
-                        <div class="project-item position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/project-3.jpg') }}" alt="">
-                            <a class="project-overlay text-decoration-none" href="#">
-                                <h4 class="text-white">Launching Produk BUMDes</h4>
-                                <small class="text-white">Juli 2025</small>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                        <div class="project-item position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/project-4.jpg') }}" alt="">
-                            <a class="project-overlay text-decoration-none" href="#">
-                                <h4 class="text-white">Pendaftaran BLT Dana Desa</h4>
-                                <small class="text-white">Sedang Berlangsung</small>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
-                        <div class="project-item position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/project-5.jpg') }}" alt="">
-                            <a class="project-overlay text-decoration-none" href="#">
-                                <h4 class="text-white">Pelatihan Digital UMKM</h4>
-                                <small class="text-white">Juni 2025</small>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.7s">
-                        <div class="project-item position-relative overflow-hidden">
-                            <img class="img-fluid w-100" src="{{ asset('assets/img/berita/berita-3.jpeg') }}" alt="">
-                            <a class="project-overlay text-decoration-none" href="#">
-                                <h4 class="text-white">Kegiatan Masyarakat</h4>
-                                <small class="text-white">Juli 2025</small>
-                            </a>
-                        </div>
+                <div class="col-lg-7">
+                    <div class="row g-0">
+                        @forelse($berita as $key => $item)
+                            <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.{{ $key+2 }}s">
+                                <div class="project-item position-relative overflow-hidden">
+                                    <img class="img-fluid w-100" 
+                                        src="{{ $item->gambar ? asset('storage/berita/'.$item->gambar) : asset('assets/img/logo.png') }}" 
+                                        alt="Gambar {{ $item->judul }}">
+                                    <a class="project-overlay text-decoration-none" href="{{ route('berita.show', $item->id) }}">
+                                        <h4 class="text-white">{{ $item->judul }}</h4>
+                                        <small class="text-white">{{ $item->tanggal ?? 'Tanpa Tanggal' }}</small>
+                                    </a>
+                                </div>
+                            </div>
+                        @empty
+                            <div class="col-12 text-center py-5">
+                                <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="mb-3" style="max-width: 120px;">
+                                <p class="text-muted">Belum ada berita tersedia.</p>
+                            </div>
+                        @endforelse
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>
@@ -200,91 +164,54 @@
                 <p>Desa Sindangpano memiliki potensi wisata alam yang indah dan masih asri. Dari hamparan sawah hijau, bendungan, hingga waduk yang menenangkan, setiap sudut desa menyajikan pemandangan yang memanjakan mata.</p>
                 <p class="mb-5">Selain itu, terdapat destinasi wisata alam Cipeundeuy Endah yang menawarkan berbagai aktivitas seru seperti rafting, tubing, hingga glamping. Desa ini menjadi pilihan tepat untuk berlibur bersama keluarga sekaligus menikmati suasana pedesaan yang damai.</p>
             </div>
-            <div class="col-lg-7">
-                <div class="row g-0">
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.2s">
-                        <div class="service-item h-100 d-flex flex-column justify-content-center bg-primary">
-                            <a href="#" class="service-img position-relative mb-4">
-                                <img class="img-fluid w-100" src="{{ asset('assets/img/wisata-1.jpeg') }}" alt="">
-                                <h3>Sawah panenjoan</h3>
-                            </a>
-                            <p class="mb-0">Nikmati keindahan hamparan sawah hijau dengan latar pegunungan yang menyejukkan mata. Tempat ini cocok untuk bersantai sambil menikmati suasana pedesaan yang asri serta menjadi spot favorit untuk berfoto.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
-                        <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
-                            <a href="#" class="service-img position-relative mb-4">
-                                <img class="img-fluid w-100" src="{{ asset('assets/img/wisata-2.jpeg') }}" alt="">
-                                <h3>Bendungan Sindangpano</h3>
-                            </a>
-                            <p class="mb-0">Bendungan ini tidak hanya berfungsi sebagai sumber irigasi, tetapi juga menjadi daya tarik wisata dengan panorama air yang tenang dikelilingi pepohonan rindang. Pengunjung dapat menikmati suasana alami sekaligus bersantai bersama keluarga.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.6s">
-                        <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
-                            <a href="#" class="service-img position-relative mb-4">
-                                <img class="img-fluid w-100" src="{{ asset('assets/img/wisata-3.jpeg') }}" alt="">
-                                <h3>Waduk Sindangpano</h3>
-                            </a>
-                            <p class="mb-0">Objek wisata air yang menjadi pusat aktivitas warga sekaligus tempat rekreasi menarik. Pengunjung bisa menikmati pemandangan waduk, memancing, atau sekadar duduk santai menikmati semilir angin di tepi waduk.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 wow fadeIn" data-wow-delay="0.8s">
-                        <div class="service-item h-100 d-flex flex-column justify-content-center bg-primary">
-                            <a href="#" class="service-img position-relative mb-4">
-                                <img class="img-fluid w-100" src="{{ asset('assets/img/wisata-4.jpeg') }}" alt="">
-                                <h3>Cipeundeuy Endah</h3>
-                            </a>
-                            <p class="mb-0">Destinasi wisata alam yang populer dengan berbagai aktivitas seru seperti rafting, tubing, hingga glamping/villa. Cocok untuk pecinta petualangan maupun keluarga yang ingin menikmati liburan.</p>
-                        </div>
+                <div class="col-lg-7">
+                    <div class="row g-0">
+                        @forelse($wisata as $key => $item)
+                            <div class="col-md-6 wow fadeIn" data-wow-delay="0.{{ $key+2 }}s">
+                                <div class="service-item h-100 d-flex flex-column justify-content-center {{ $key % 2 == 0 ? 'bg-primary' : 'bg-light' }}">
+                                    <a href="{{ route('wisata.show', $item->id) }}" class="service-img position-relative mb-4">
+                                        <img class="img-fluid w-100" 
+                                            src="{{ $item->gambar ? asset('storage/wisata/'.$item->gambar) : asset('assets/img/logo.png') }}" 
+                                            alt="Gambar {{ $item->nama }}">
+                                        <h3>{{ $item->nama }}</h3>
+                                    </a>
+                                    <p class="mb-0">{{ $item->deskripsi }}</p>
+                                </div>
+                            </div>
+                        @empty
+                            <div class="col-12 text-center py-5">
+                                <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="mb-3" style="max-width: 120px;">
+                                <p class="text-muted">Belum ada data wisata tersedia.</p>
+                            </div>
+                        @endforelse
                     </div>
                 </div>
-            </div>
         </div>
     </div>
 </div>
 <div class="container-fluid bg-light py-5">
-        <div class="container py-5">
-            <h1 class="mb-5">UMKM <span class="text-uppercase text-primary bg-light px-2">Lokal</span>
-            </h1>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+    <div class="container py-5">
+        <h1 class="mb-5">UMKM <span class="text-uppercase text-primary bg-light px-2">Lokal</span></h1>
+        <div class="row g-4">
+            @forelse($umkm as $key => $item)
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.{{ $key+1 }}s">
                     <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{{ asset('assets/img/roti-1.jpeg') }}" alt="">
+                        <img class="img-fluid w-100" 
+                            src="{{ $item->gambar ? asset('storage/umkm/'.$item->gambar) : asset('assets/img/logo.png') }}" 
+                            alt="Gambar {{ $item->nama_umkm }}">
                         <div class="team-overlay">
                             <small class="mb-2">UMKM</small>
-                            <h4 class="lh-base text-light">Roti Bakar</h4>
+                            <h4 class="lh-base text-light">{{ $item->nama_umkm }}</h4>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;">
-                    <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{{ asset('assets/img/melinjo-1.jpeg') }}" alt="">
-                        <div class="team-overlay">
-                            <small class="mb-2">UMKM</small>
-                            <h4 class="lh-base text-light">Kerajinan Rotan</h4>
-                        </div>
-                    </div>
+            @empty
+                <div class="col-12 text-center py-5">
+                    <img src="{{ asset('assets/img/logo.png') }}" alt="Logo" class="mb-3" style="max-width: 120px;">
+                    <p class="text-muted">Belum ada data UMKM tersedia.</p>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeIn;">
-                    <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{{ asset('assets/img/melinjo-1.jpeg') }}" alt="">
-                        <div class="team-overlay">
-                            <small class="mb-2">UMKM</small>
-                            <h4 class="lh-base text-light">Emping Melinjo</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s" style="visibility: visible; animation-delay: 0.7s; animation-name: fadeIn;">
-                    <div class="team-item position-relative overflow-hidden">
-                        <img class="img-fluid w-100" src="{{ asset('assets/img/melinjo-1.jpeg') }}" alt="">
-                        <div class="team-overlay">
-                            <small class="mb-2">UMKM</small>
-                            <h4 class="lh-base text-light">Keripik Gadung</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
+</div>
 @endsection

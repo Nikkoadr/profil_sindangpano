@@ -11,6 +11,7 @@ use App\Models\Berita;
 use App\Models\Wisata;
 use App\Models\Umkm;
 use App\Models\Pengaturan;
+use App\Http\Controllers\PencarianController;
 
 Route::get('/', function () {
     $pengaturan = Pengaturan::first();
@@ -26,6 +27,9 @@ Route::get('/sejarah', function () {
     return view('sejarah');
 });
 
+Route::get('/berita/search', [PencarianController::class, 'search_berita'])->name('berita.search');
+Route::get('/umkm/search', [PencarianController::class, 'search_umkm'])->name('umkm.search');
+Route::get('/wisata/search', [PencarianController::class, 'search_wisata'])->name('wisata.search');
 Route::get('/berita', function () {
     $berita = Berita::latest()->take(6)->get();
     return view('berita', compact('berita'));

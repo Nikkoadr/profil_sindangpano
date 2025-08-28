@@ -6,6 +6,6 @@
         @include('layouts.welcome.navbar')
         @yield('content')
         @include('layouts.welcome.footer')
-        @yield('script')
+        @yield('scripts')
     </body>
 </html>

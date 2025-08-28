@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
             User_seed::class,
             Pengaturan_seed::class,
             Wisata_seed::class,
+            Berita_seed::class,
             Umkm_seed::class,
         ]);
     }

@@ -25,17 +25,47 @@
                     <div class="card-body">
                         <div class="form-group">
                             <label>Nama UMKM</label>
-                            <input type="text" name="nama_umkm" class="form-control" value="{{ old('nama_umkm', $umkm->nama_umkm) }}" required>
+                            <input type="text" name="nama_umkm" class="form-control" 
+                                   value="{{ old('nama_umkm', $umkm->nama_umkm) }}" required>
+                            @error('nama_umkm')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <label>Alamat</label>
-                            <input type="text" name="alamat" class="form-control" value="{{ old('alamat', $umkm->alamat) }}" required>
+                            <input type="text" name="alamat" class="form-control" 
+                                   value="{{ old('alamat', $umkm->alamat) }}" required>
+                            @error('alamat')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-group">
                             <label>Kontak</label>
-                            <input type="text" name="kontak" class="form-control" value="{{ old('kontak', $umkm->kontak) }}" required>
+                            <input type="text" name="kontak" class="form-control" 
+                                   value="{{ old('kontak', $umkm->kontak) }}" required>
+                            @error('kontak')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label>Produk</label>
+                            <input type="text" name="produk" class="form-control" 
+                                   value="{{ old('produk', $umkm->produk) }}" required>
+                            @error('produk')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+
+                        <div class="form-group">
+                            <label>Deskripsi</label>
+                            <input type="text" name="deskripsi" class="form-control" 
+                                   value="{{ old('deskripsi', $umkm->deskripsi) }}" required>
+                            @error('deskripsi')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
                         </div>
 
                         <div class="form-group">
@@ -47,14 +77,15 @@
                                 </div>
                             </div>
                             @if($umkm->gambar)
-                                <img src="{{ asset('storage/umkm/'.$umkm->gambar) }}" width="120" class="mt-2 rounded shadow">
+                                <img src="{{ asset('storage/umkm/'.$umkm->gambar) }}" 
+                                     width="120" class="mt-2 rounded shadow">
                             @endif
                             @error('gambar')
                                 <small class="text-danger d-block">{{ $message }}</small>
                             @enderror
                         </div>
-
                     </div>
+
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
                         <a href="{{ route('umkm.index') }}" class="btn btn-secondary">Kembali</a>

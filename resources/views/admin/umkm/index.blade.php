@@ -93,15 +93,38 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label>Nama UMKM</label>
-                        <input type="text" name="nama_umkm" class="form-control" required>
+                        <input type="text" name="nama_umkm" class="form-control" value="{{ old('nama_umkm') }}" required>
+                        @error('nama_umkm')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Alamat</label>
-                        <input type="text" name="alamat" class="form-control" required>
+                        <input type="text" name="alamat" class="form-control" value="{{ old('alamat') }}" required>
+                        @error('alamat')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label>Kontak</label>
-                        <input type="text" name="kontak" class="form-control" required>
+                        <input type="text" name="kontak" class="form-control" value="{{ old('kontak') }}" required>
+                        @error('kontak')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label>Produk</label>
+                        <input type="text" name="produk" class="form-control" value="{{ old('produk') }}" required>
+                        @error('produk')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
+                    </div>
+                    <div class="form-group">
+                        <label>Deskripsi</label>
+                        <input type="text" name="deskripsi" class="form-control" value="{{ old('deskripsi') }}" required>
+                        @error('deskripsi')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="gambar">Upload Gambar</label>

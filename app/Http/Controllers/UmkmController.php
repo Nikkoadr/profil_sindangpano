@@ -36,6 +36,8 @@ class UmkmController extends Controller
             'nama_umkm' => 'required|string|max:255',
             'alamat' => 'required',
             'kontak' => 'required',
+            'produk' => 'required',
+            'deskripsi' => 'required',
             'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -46,6 +48,8 @@ class UmkmController extends Controller
             'nama_umkm' => $validated['nama_umkm'],
             'alamat'    => $validated['alamat'],
             'kontak'    => $validated['kontak'],
+            'produk'    => $validated['produk'],
+            'deskripsi' => $validated['deskripsi'],
             'gambar'    => $filename,
         ]);
 
@@ -66,6 +70,8 @@ class UmkmController extends Controller
             'nama_umkm' => 'required|string|max:255',
             'alamat' => 'required',
             'kontak' => 'required',
+            'produk' => 'required',
+            'deskripsi' => 'required',
             'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -87,6 +93,8 @@ class UmkmController extends Controller
             'nama_umkm' => $validated['nama_umkm'],
             'alamat' => $validated['alamat'],
             'kontak' => $validated['kontak'],
+            'produk' => $validated['produk'],
+            'deskripsi' => $validated['deskripsi'],
             'gambar' => $validated['gambar'],
         ]);
 
