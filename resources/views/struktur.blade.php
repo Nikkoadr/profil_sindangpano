@@ -62,7 +62,7 @@
     </div>
 @endsection
 
-@section('script')
+@section('scripts')
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/orgchart@2.1.9/dist/js/jquery.orgchart.min.js"></script>
     <script>
