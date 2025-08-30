@@ -57,25 +57,42 @@
 <div class="container-fluid py-5">
     <div class="container">
         <div class="row g-5">
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
-                            <img class="img-fluid" src="{{ asset('assets/img/logo.png') }}" alt="Kegiatan Masyarakat">
-                        </div>
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
-                            <img class="img-fluid h-75" src="{{ asset('assets/img/maps.jpeg') }}" alt="Alam Sindangpano">
-                            <div class="h-25 d-flex align-items-center text-center bg-primary px-4">
-                                <h4 class="text-white lh-base mb-0">Batas Wilayah Desa</h4>
-                            </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
+                        <img class="img-fluid" src="{{ asset('assets/img/logo.png') }}" alt="Kegiatan Masyarakat">
+                    </div>
+                    <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
+                        <img class="img-fluid h-75" src="{{ asset('assets/img/maps.jpeg') }}" alt="Peta Desa Sindangpano">
+                        <div class="h-25 d-flex align-items-center text-center bg-primary px-4">
+                            <h4 class="text-white lh-base mb-0">Batas Wilayah Desa</h4>
                         </div>
                     </div>
                 </div>
+            </div>
             <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                <h1 class="mb-5"><span class="text-uppercase text-primary bg-light px-2">Sejarah</span> Desa Sindangpano</h1>
+                <h1 class="mb-5"><span class="text-uppercase text-primary bg-light px-2">Data Geografis</span> Desa Sindangpano</h1>
                 <p class="mb-4">
-                    Desa Sindangpano sudah ada sejak masa Kerajaan Hindu, khususnya pada masa kejayaan Kerajaan Pajajaran. Awalnya dikenal dengan nama Kole Beres, dipimpin oleh Kuwu pertama Prabu Atma Lengkara (Guriang Katuran) yang tinggal di Komplek Kepel. Kepemimpinan dilanjutkan oleh Guriang Raja Polah dan kemudian oleh para Demang: Toplak, Karwi, Centong (Gagak Resi), dan Candranala, sebelum abad ke-14.</p>
-                <p class="mb-4">Pada tahun 1425 M, saat penyebaran Islam oleh Wali Sanga di Jawa Barat, wilayah ini disinggahi dan dipimpin oleh Pangeran Panunggelan, keturunan Embah Kuwu Sangkan dari Cirebon Girang. Di masa ini, masyarakat hidup aman dan tentram, sehingga wilayah Kole Beres meliputi Babakan Kareo, Singawada, Sadomas, dan Payung.</p>
-                <p class="mb-5">Kepemimpinan berlanjut ke para Kuwu selama beberapa generasi hingga mencapai 42 Kuwu. Pada masa Islam, wilayah ini akhirnya dinamakan Desa Sindangpano, dengan arti tempat singgah dan musyawarah, dipimpin oleh Saidin Jati, anak dari adik Raden Baridin.</p>
+                    Desa Sindangpano merupakan salah satu desa yang berada di wilayah Kecamatan Rajagaluh, Kabupaten Majalengka, Jawa Barat. 
+                    Secara geografis, wilayah desa ini terdiri dari perbukitan, persawahan, perkebunan melinjo, serta tebing di sepanjang jalan yang telah diaspal pada tahun 2012.
+                </p>
+                <p class="mb-4">
+                    Batas-batas wilayah Desa Sindangpano adalah: <br>
+                    <strong>Utara</strong>: Desa Sadomas <br>
+                    <strong>Selatan</strong>: Desa Payung <br>
+                    <strong>Timur</strong>: Desa Bataragung (Bantaragung) <br>
+                    <strong>Barat</strong>: Desa Teja
+                </p>
+                <p class="mb-4">
+                    Luas wilayah Desa Sindangpano mencapai <strong>280,35 Ha</strong>. 
+                    Jarak desa ini ke ibu kota provinsi (Bandung) sekitar <strong>113 km</strong>, 
+                    ke ibu kota kabupaten (Majalengka) sekitar <strong>13 km</strong>, 
+                    dan ke ibu kota kecamatan (Rajagaluh) sekitar <strong>6 km</strong>.
+                </p>
+                <p class="mb-0">
+                    Tofografi dan kontur tanah desa berupa tanah pegunungan dan persawahan, dengan ketinggian 
+                    <strong>500–600 m dpl</strong> serta suhu rata-rata <strong>20 °C – 30 °C</strong>.
+                </p>
             </div>
         </div>
     </div>
