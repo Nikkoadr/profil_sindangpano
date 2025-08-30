@@ -17,37 +17,37 @@ class Berita_seed extends Seeder
             [
                 'judul' => 'Peringatan HUT RI ke-80',
                 'isi' => 'Kegiatan upacara dan perlombaan dalam rangka memperingati Hari Kemerdekaan Republik Indonesia yang ke-80.',
-                'gambar' => 'berita-1.jpeg',
+                'gambar' => null,
                 'penulis' => 'Admin Desa',
             ],
             [
                 'judul' => 'Kerja Bakti Bersih Desa',
                 'isi' => 'Masyarakat bergotong royong membersihkan lingkungan desa untuk menjaga kebersihan dan kesehatan.',
-                'gambar' => 'berita-2.jpeg',
+                'gambar' => null,
                 'penulis' => 'Admin Desa',
             ],
             [
                 'judul' => 'Launching Produk BUMDes',
                 'isi' => 'BUMDes resmi meluncurkan produk baru untuk mendukung perekonomian masyarakat desa.',
-                'gambar' => 'project-3.jpg',
+                'gambar' => null,
                 'penulis' => 'Admin Desa',
             ],
             [
                 'judul' => 'Pendaftaran BLT Dana Desa',
                 'isi' => 'Pemerintah desa membuka pendaftaran Bantuan Langsung Tunai dari Dana Desa bagi masyarakat yang berhak.',
-                'gambar' => 'project-4.jpg',
+                'gambar' => null,
                 'penulis' => 'Admin Desa',
             ],
             [
                 'judul' => 'Pelatihan Digital UMKM',
                 'isi' => 'Pelaku UMKM desa mengikuti pelatihan digitalisasi untuk meningkatkan pemasaran produk.',
-                'gambar' => 'project-5.jpg',
+                'gambar' => null,
                 'penulis' => 'Admin Desa',
             ],
             [
                 'judul' => 'Kegiatan Masyarakat',
                 'isi' => 'Rangkaian kegiatan sosial dan budaya yang diikuti oleh warga desa.',
-                'gambar' => 'berita-3.jpeg',
+                'gambar' => null,
                 'penulis' => 'Admin Desa',
             ],
             [

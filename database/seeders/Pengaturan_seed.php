@@ -14,7 +14,7 @@ class Pengaturan_seed extends Seeder
     {
         Pengaturan::create(
             [
-                'logo' => 'logo.png',
+                'logo' => null,
                 'nama' => 'Sindangpano',
                 'alamat' => 'Jl. Sindangpano No. 1',
                 'no_telp' => '08123456789',
