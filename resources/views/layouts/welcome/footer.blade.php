@@ -20,19 +20,18 @@
             <!-- Tautan Penting -->
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                 <h5 class="text-white mb-4">Tautan Penting</h5>
-                <a class="btn btn-link" href="#">Tentang Desa</a>
-                <a class="btn btn-link" href="#">Berita</a>
-                <a class="btn btn-link" href="#">Wisata</a>
-                <a class="btn btn-link" href="#">Kontak</a>
+                <a class="btn btn-link" href="/sejarah">Tentang Desa</a>
+                <a class="btn btn-link" href="/berita">Berita</a>
+                <a class="btn btn-link" href="/wisata">Wisata</a>
+                <a class="btn btn-link" href="/kontak">Kontak</a>
             </div>
 
             <!-- Kategori Desa -->
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                 <h5 class="text-white mb-4">Kategori</h5>
-                <a class="btn btn-link" href="#">Wisata Alam</a>
-                <a class="btn btn-link" href="#">Budaya & Tradisi</a>
-                <a class="btn btn-link" href="#">UMKM Lokal</a>
-                <a class="btn btn-link" href="#">Kegiatan Desa</a>
+                <a class="btn btn-link" href="/wisata">Wisata Alam</a>
+                <a class="btn btn-link" href="/umkm">UMKM Lokal</a>
+                <a class="btn btn-link" href="/berita">Kegiatan Desa</a>
             </div>
         </div>
     </div>

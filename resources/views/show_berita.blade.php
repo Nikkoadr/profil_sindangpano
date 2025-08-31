@@ -43,7 +43,7 @@
                         {!! $berita->isi !!}
                     </div>
                     <div class="mt-5 text-center">
-                        <a href="{{ route('berita.index') }}" class="btn btn-primary py-3 px-4">Kembali ke Berita</a>
+                        <a href="/berita" class="btn btn-primary py-3 px-4">Kembali ke Berita</a>
                     </div>
                 </div>
             </div>

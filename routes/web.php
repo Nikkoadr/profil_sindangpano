@@ -12,6 +12,7 @@ use App\Models\Wisata;
 use App\Models\Umkm;
 use App\Models\Pengaturan;
 use App\Http\Controllers\PencarianController;
+use App\Http\Controllers\Show_guestController;
 
 Route::get('/', function () {
     $pengaturan = Pengaturan::first();
@@ -30,6 +31,7 @@ Route::get('/sejarah', function () {
 Route::get('/berita/search', [PencarianController::class, 'search_berita'])->name('berita.search');
 Route::get('/umkm/search', [PencarianController::class, 'search_umkm'])->name('umkm.search');
 Route::get('/wisata/search', [PencarianController::class, 'search_wisata'])->name('wisata.search');
+
 Route::get('/berita', function () {
     $berita = Berita::latest()->take(6)->get();
     return view('berita', compact('berita'));
@@ -57,6 +59,8 @@ Auth::routes([
 ]);
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/welcome/berita/show/{id}', [Show_guestController::class, 'show_berita_guest'])->name('berita.show_berita_guest');
+
 Route::resource('/home/berita', BeritaController::class);
 Route::resource('/home/umkm', UmkmController::class);
 Route::resource('/home/wisata', WisataController::class);

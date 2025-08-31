@@ -46,7 +46,7 @@
                         <div class="p-4">
                             <h4 class="mb-3">{{ $row->judul }}</h4>
                             <p>{{ Str::limit(strip_tags($row->isi), 100, '...') }}</p>
-                            <a href="{{ route('berita.show',$row->id) }}" class="btn btn-primary rounded-pill">Baca Selengkapnya</a>
+                            <a href="{{ route('berita.show_berita_guest', $row->id) }}" class="btn btn-primary rounded-pill">Baca Selengkapnya</a>
                         </div>
                     </div>
                 </div>

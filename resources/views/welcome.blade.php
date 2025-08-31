@@ -155,7 +155,7 @@
                                     <img class="img-fluid w-100" 
                                         src="{{ $item->gambar ? asset('storage/berita/'.$item->gambar) : asset('assets/img/logo.png') }}" 
                                         alt="Gambar {{ $item->judul }}">
-                                    <a class="project-overlay text-decoration-none" href="{{ route('berita.show', $item->id) }}">
+                                    <a class="project-overlay text-decoration-none" href="{{ route('berita.show_berita_guest', $item->id) }}">
                                         <h4 class="text-white">{{ $item->judul }}</h4>
                                         <small class="text-white">{{ $item->tanggal ?? 'Tanpa Tanggal' }}</small>
                                     </a>
