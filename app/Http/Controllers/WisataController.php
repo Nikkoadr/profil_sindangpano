@@ -36,7 +36,7 @@ class WisataController extends Controller
             'nama_wisata' => 'required|string|max:255',
             'alamat' => 'required',
             'kontak' => 'required',
-            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5000',
+            'gambar' => 'required|image',
         ]);
 
         $filename = $request->file('gambar')->hashName();
@@ -66,7 +66,7 @@ class WisataController extends Controller
             'nama_wisata' => 'required|string|max:255',
             'alamat' => 'required',
             'kontak' => 'required',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5000',
+            'gambar' => 'nullable|image',
         ]);
 
         $wisata = Wisata::findOrFail($id);
