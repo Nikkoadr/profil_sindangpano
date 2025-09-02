@@ -188,7 +188,7 @@
                         @forelse($wisata as $key => $item)
                             <div class="col-md-6 wow fadeIn" data-wow-delay="0.{{ $key+2 }}s">
                                 <div class="service-item h-100 d-flex flex-column justify-content-center {{ $key % 2 == 0 ? 'bg-primary' : 'bg-light' }}">
-                                    <a href="{{ route('wisata.show', $item->id) }}" class="service-img position-relative mb-4">
+                                    <a href="/wisata" class="service-img position-relative mb-4">
                                         <img class="img-fluid w-100" 
                                             src="{{ $item->gambar ? asset('storage/wisata/'.$item->gambar) : asset('assets/img/logo.png') }}" 
                                             alt="Gambar {{ $item->nama_wisata }}">
@@ -220,7 +220,8 @@
                             alt="Gambar {{ $item->nama_umkm }}">
                         <div class="team-overlay">
                             <small class="mb-2">UMKM</small>
-                            <h4 class="lh-base text-light">{{ $item->nama_umkm }}</h4>
+                            <a href="/umkm" class="stretched-link"><h4 class="lh-base text-light">{{ $item->nama_umkm }}</h4></a>
+                            
                         </div>
                     </div>
                 </div>
