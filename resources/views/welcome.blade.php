@@ -157,7 +157,9 @@
                                         alt="Gambar {{ $item->judul }}">
                                     <a class="project-overlay text-decoration-none" href="{{ route('berita.show_berita_guest', $item->id) }}">
                                         <h4 class="text-white">{{ $item->judul }}</h4>
-                                        <small class="text-white">{{ $item->tanggal ?? 'Tanpa Tanggal' }}</small>
+                                        <small class="text-white">
+                                            {{ $item->updated_at ? \Carbon\Carbon::parse($item->updated_at)->translatedFormat('d F Y') : 'Tanpa Tanggal' }}
+                                        </small>
                                     </a>
                                 </div>
                             </div>
@@ -189,8 +191,8 @@
                                     <a href="{{ route('wisata.show', $item->id) }}" class="service-img position-relative mb-4">
                                         <img class="img-fluid w-100" 
                                             src="{{ $item->gambar ? asset('storage/wisata/'.$item->gambar) : asset('assets/img/logo.png') }}" 
-                                            alt="Gambar {{ $item->nama }}">
-                                        <h3>{{ $item->nama }}</h3>
+                                            alt="Gambar {{ $item->nama_wisata }}">
+                                        <h3>{{ $item->nama_wisata }}</h3>
                                     </a>
                                     <p class="mb-0">{{ $item->deskripsi }}</p>
                                 </div>

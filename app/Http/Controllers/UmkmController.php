@@ -38,7 +38,7 @@ class UmkmController extends Controller
             'kontak' => 'required',
             'produk' => 'required',
             'deskripsi' => 'required',
-            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:5000',
         ]);
 
         $filename = $request->file('gambar')->hashName();
@@ -72,7 +72,7 @@ class UmkmController extends Controller
             'kontak' => 'required',
             'produk' => 'required',
             'deskripsi' => 'required',
-            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5000',
         ]);
 
         $umkm = Umkm::findOrFail($id);
