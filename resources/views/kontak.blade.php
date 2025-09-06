@@ -29,7 +29,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-7">
-                    <p class="text-center mb-4">Jika Anda memiliki pertanyaan atau masukan, jangan ragu untuk menghubungi kami melalui email <a class="border-bottom" href="mailto:sindangpano@gmail.com">sindangpano@gmail.com</a>.</p>
+                    <p class="text-center mb-4">Jika Anda memiliki pertanyaan atau masukan, jangan ragu untuk menghubungi kami melalui email <a class="border-bottom" href="mailto:admin@sindangpano.com">admin@sindangpano.com</a>.</p>
 
                 </div>
             </div>
