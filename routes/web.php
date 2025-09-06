@@ -16,7 +16,7 @@ use App\Http\Controllers\Show_guestController;
 
 Route::get('/', function () {
     $pengaturan = Pengaturan::first();
-    $berita = Berita::latest()->take(6)->get();
+    $berita = Berita::orderBy('updated_at', 'desc')->take(6)->get();;
     $wisata = Wisata::latest()->take(4)->get();
     $umkm = Umkm::latest()->take(4)->get();
     return view('welcome', compact('berita', 'wisata', 'umkm', 'pengaturan'));

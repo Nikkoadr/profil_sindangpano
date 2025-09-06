@@ -48,10 +48,13 @@
                                 <small class="text-danger d-block">{{ $message }}</small>
                             @enderror
                         </div>
-
                         <div class="form-group">
                             <label>Penulis</label>
                             <input type="text" class="form-control" value="{{ $berita->penulis }}" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal</label>
+                            <input type="date" name="updated_at" class="form-control" value="{{ $berita->updated_at->format('Y-m-d') }}" required>
                         </div>
                     </div>
                     <div class="card-footer">

@@ -57,7 +57,7 @@
                                 </td>
                                 <td>{{ $item->judul }}</td>
                                 <td>{{ $item->penulis }}</td>
-                                <td>{{ $item->created_at->format('d/m/Y') }}</td>
+                                <td>{{ $item->updated_at->format('d/m/Y') }}</td>
                                 <td class="text-center">
                                     <a href="{{ route('berita.edit', $item->id) }}" class="btn btn-primary btn-sm">
                                         <i class="fas fa-edit"></i>

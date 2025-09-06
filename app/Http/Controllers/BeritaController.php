@@ -66,7 +66,9 @@ class BeritaController extends Controller
         $validated = $request->validate([
             'judul' => 'required|string|max:255',
             'isi' => 'required',
+            'updated_at' => 'required',
             'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:5000',
+            
         ]);
 
         $berita = Berita::findOrFail($id);
@@ -87,6 +89,7 @@ class BeritaController extends Controller
             'judul' => $validated['judul'],
             'isi' => $validated['isi'],
             'gambar' => $validated['gambar'],
+            'updated_at' => $validated['updated_at'],
             'penulis' => Auth::user()->name,
         ]);
 
