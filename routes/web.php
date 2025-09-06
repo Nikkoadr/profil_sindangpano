@@ -33,7 +33,7 @@ Route::get('/umkm/search', [PencarianController::class, 'search_umkm'])->name('u
 Route::get('/wisata/search', [PencarianController::class, 'search_wisata'])->name('wisata.search');
 
 Route::get('/berita', function () {
-    $berita = Berita::latest()->take(6)->get();
+    $berita = Berita::orderBy('updated_at', 'desc')->take(6)->get();
     return view('berita', compact('berita'));
 });
 Route::get('/wisata', function () {
