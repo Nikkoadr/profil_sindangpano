@@ -13,8 +13,7 @@
             <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                 <h5 class="text-white mb-4">Hubungi Kami</h5>
                 <p><i class="fa fa-map-marker-alt me-3"></i>Sindangpano, Rajagaluh, Majalengka</p>
-                <p><i class="fa fa-phone-alt me-3"></i>+62 812-3456-7890</p>
-                <p><i class="fa fa-envelope me-3"></i>desa@sindangpano.id</p>
+                <p><i class="fa fa-envelope me-3"></i>admin@sindangpano.com</p>
             </div>
 
             <!-- Tautan Penting -->
