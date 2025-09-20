@@ -26,47 +26,85 @@
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-                    
+
                     <!-- Nama UMKM -->
                     <div class="text-center mb-5">
                         <h1 class="mb-3">{{ $umkm->nama_umkm }}</h1>
                         <h5 class="text-muted">Produk: {{ $umkm->produk }}</h5>
                     </div>
 
-                    <!-- Carousel Foto Varian -->
-                    <div id="carouselVarian" class="carousel slide mb-5" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselVarian" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselVarian" data-bs-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </button>
-                    </div>
-
                     <!-- Deskripsi Umum -->
                     <div class="mb-4">
                         <h3 class="fw-bold">Tentang {{ $umkm->nama_umkm }}</h3>
-                        <p>{{ $umkm->deskripsi }}</p>
+                        @if($umkm->nama_umkm == 'Emping Hafilah')
+                            <div class=" p-4">
+                                <h5 class="fw-bold">1. Identitas Produk</h5>
+                                <p>
+                                    <strong>Kategori:</strong> Makanan Ringan Tradisional <br>
+                                    <strong>Bidang:</strong> Kuliner / Olahan Pangan <br>
+                                    <strong>Nama UMKM:</strong> Emping Hafilah <br>
+                                    <strong>Alamat Produksi:</strong> Jl. Sindangpano Rt 03 Rw 01, Desa Sindangpano, Kec. Rajagaluh, Kab. Majalengka <br>
+                                    <strong>Tahun Produksi:</strong> 2025
+                                </p>
+
+                                <h5 class="fw-bold">2. Deskripsi Produk</h5>
+                                <p>
+                                    <strong>Nama Komersial:</strong> “Emping Hafilah” <br>
+                                    Nama ini menggambarkan sensasi kriuk yang khas saat dikonsumsi, 
+                                    dengan sentuhan personal dari nama pemilik yang menjadi jaminan kualitas. 
+                                    Produk masuk kategori makanan ringan tradisional berbasis bahan alami tanpa bahan pengawet.
+                                </p>
+                                <p>
+                                    <strong>Bentuk Fisik & Bahan Utama:</strong><br>
+                                    • Bentuk: Bulat pipih, warna kekuningan hingga cream pucat, ukuran bervariasi.<br>
+                                    • Bahan Utama: Biji melinjo, garam, minyak goreng/pasir.<br>
+                                    • Keunggulan: Proses produksi higienis, rasa gurih alami tanpa MSG berlebihan, cocok untuk semua usia.
+                                </p>
+
+                                <h5 class="fw-bold">3. Komposisi</h5>
+                                <ul>
+                                    <li>Biji Melinjo – memberi rasa khas emping (sedikit pahit namun gurih)</li>
+                                    <li>Garam – menyeimbangkan rasa khas melinjo</li>
+                                    <li>Minyak goreng</li>
+                                </ul>
+
+                                <h5 class="fw-bold">4. Cara Pembuatan</h5>
+                                <p>
+                                    Emping dibuat dari biji melinjo yang disangrai lalu dikupas, 
+                                    kemudian ditumbuk hingga tipis berbentuk bulat, dijemur hingga kering, 
+                                    dan siap digoreng sebelum dikonsumsi.
+                                </p>
+
+                                <h5 class="fw-bold">5. Kemasan Produk</h5>
+                                <p>
+                                    <strong>Bahan Kemasan:</strong> Pouch Zip Lock <br>
+                                    <strong>Fungsi:</strong> Melindungi dari udara lembap, menjaga kerenyahan, dan mempermudah distribusi. <br>
+                                    <strong>Keunggulan:</strong> Desain kemasan menarik, mencantumkan label komposisi & tanggal produksi.
+                                </p>
+                            </div>
+                        @else
+                            <p>{{ $umkm->deskripsi }}</p>
+                        @endif
                     </div>
-                    
-                    <!-- Deskripsi Per Varian -->
+
+                    <!-- Varian Rasa / Gambar -->
                     @if($umkm->gambar == null)
                         <div class="alert alert-warning" role="alert">
                             Gambar UMKM tidak tersedia.
                         </div>
                     @else
                         <div class="mb-4">
-                            @if($umkm->nama_umkm == 'Emping Hafilah') <h4 class="fw-bold">Varian Rasa : Original dan Pedas Manis</h4> @endif
+                            @if($umkm->nama_umkm == 'Emping Hafilah')
+                                <h4 class="fw-bold">Varian Rasa : Original dan Pedas Manis</h4>
+                            @endif
                             <div class="row g-4">
-                                    <div class="col-md-4">
-                                        <div class="card shadow-sm h-100">
+                                <div class="col-md-4">
+                                    <div class="card shadow-sm h-100">
                                         <img src="{{ asset('storage/umkm/'.$umkm->gambar) }}" 
-                                        alt="Varian Rasa " 
-                                        class="d-block w-100 img-fluid rounded shadow">
-                                        </div>
+                                            alt="Varian Rasa" 
+                                            class="d-block w-100 img-fluid rounded shadow">
                                     </div>
+                                </div>
                             </div>
                         </div>
                     @endif
@@ -80,9 +118,12 @@
                             <li><strong>Kontak:</strong> {{ $umkm->kontak ?? '-' }}</li>
                         </ul>
                         <div class="d-flex gap-3 mt-3">
-                            @if($umkm->nama_umkm == 'Emping Hafilah') <img src="{{ asset('assets/img/halal_emping.png') }}" alt="Logo Halal" style="height:100px;"> @endif
+                            @if($umkm->nama_umkm == 'Emping Hafilah')
+                                <img src="{{ asset('assets/img/halal_emping.png') }}" alt="Logo Halal" style="height:100px;">
+                            @endif
                         </div>
                     </div>
+
                     <!-- Tombol Kembali -->
                     <div class="mt-5 text-center">
                         <a href="/umkm" class="btn btn-primary py-3 px-4">Kembali ke UMKM</a>
