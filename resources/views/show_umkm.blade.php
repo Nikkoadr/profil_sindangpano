@@ -80,7 +80,7 @@
                             <li><strong>Kontak:</strong> {{ $umkm->kontak ?? '-' }}</li>
                         </ul>
                         <div class="d-flex gap-3 mt-3">
-                            @if($umkm->nama_umkm == 'Emping Hafilah') <img src="{{ asset('assets/img/halal_emping.png') }}" alt="Logo Halal" style="height:150px;"> @endif
+                            @if($umkm->nama_umkm == 'Emping Hafilah') <img src="{{ asset('assets/img/halal_emping.png') }}" alt="Logo Halal" style="height:100px;"> @endif
                         </div>
                     </div>
                     <!-- Tombol Kembali -->
