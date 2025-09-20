@@ -60,6 +60,7 @@ Auth::routes([
 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/welcome/berita/show/{id}', [Show_guestController::class, 'show_berita_guest'])->name('berita.show_berita_guest');
+Route::get('/welcome/umkm/show/{id}', [Show_guestController::class, 'show_umkm'])->name('show_umkm_detail');
 
 Route::resource('/home/berita', BeritaController::class);
 Route::resource('/home/umkm', UmkmController::class);

@@ -36,7 +36,7 @@
                         src="{{ $row->gambar ? asset('storage/umkm/'.$row->gambar) : asset('assets/img/logo.png') }}" 
                         alt="{{ $row->nama_umkm }}">
                     <div class="card-body">
-                        <h5 class="card-title">{{ $row->nama_umkm }}</h5>
+                        <h5 class="card-title"><a href="{{ route('show_umkm_detail', $row->id) }}">{{ $row->nama_umkm }}</a></h5>
                         <p class="card-text"><strong>Produk:</strong> {{ $row->produk }}</p>
                         <p>{{ Str::limit($row->deskripsi, 100) }}</p>
                     </div>
